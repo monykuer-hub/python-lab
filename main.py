@@ -1,18 +1,10 @@
-﻿from config import APP_NAME, PROMPT_NAME, PROMPT_NUMBER
-from utils import celsius_to_fahrenheit, greet, is_even, square
+from util import square, is_even
 
+user_input = float(input("Enter the number: "))
 
-def main():
-    print(f"Welcome to {APP_NAME}!")
-    name = input(PROMPT_NAME)
-    number = int(input(PROMPT_NUMBER))
-    parity = "even" if is_even(number) else "odd"
+num_squared = square(user_input) 
+is_number_even = is_even(user_input)
 
-    print(greet(name))
-    print(f"Square: {square(number)}")
-    print(f"The number is {parity}.")
-    print(f"Fahrenheit: {celsius_to_fahrenheit(number)}")
+print(f"The square of {user_input} is {num_squared}")
 
-
-if __name__ == "__main__":
-    main()
+print(f"The number is even: {is_number_even}")
